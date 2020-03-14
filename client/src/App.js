@@ -1,17 +1,8 @@
-import {Route, BrowserRouter as Router} from "react-router-dom";
-
+// import {Route, BrowserRouter as Router} from "react-router-dom";
 
 import React from "react";
+import logo from "././logo192.png";
+import "././App.js"
 
-
-function App() {
-  return (
-    <Router>
-      <div>
-        
-      </div>
-    </Router>
-  );
-};
 
 export default App;
