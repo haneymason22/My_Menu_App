@@ -2,7 +2,8 @@
 
 import React, { useEffect, useState } from "react";
 import Recipe from "././Recipe";
-import "././App.js";
+import style from "././app.module.css";
+// import "././App.js";
 
 const App = () => {
   const APP_ID = "76ee5205";
@@ -48,14 +49,17 @@ const App = () => {
           Search
         </button>
       </form>
+      <div className ="recipes">
       {recipes.map(recipe => (
         <Recipe
           key={recipe.recipe.label}
           title={recipe.recipe.label}
           calories={recipe.recipe.calories}
           image={recipe.recipe.image}
+          ingredients={recipe.recipe.ingredients}
         />
       ))}
+      </div>
     </div>
   );
 };
