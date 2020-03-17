@@ -2,8 +2,8 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const grocerySchema = new Schema({
-   name: { type: String, required: true },
-   desciption: { type: String, required: true },
+   title: { type: String, required: true },
+   calories: { type: Integer, required: true },
    ingredients: { type: Array, required: true },
    directions: { type: Array, required: true },
    date: { type: Date, default: Date.now }
