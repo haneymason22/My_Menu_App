@@ -12,7 +12,8 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-app.use(routes);
+app.use(app.router);
+routes.initialize(app);
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/groceryList");
 
