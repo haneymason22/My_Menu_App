@@ -1,0 +1,25 @@
+.navbar{
+    background-color: #8dc63f !important;
+    height: 100px;
+}
+
+.navbar-brand{
+    font-size: 35px;
+}
+
+a {
+    text-decoration: none;
+    color: white
+}
+ a:hover {
+    text-decoration: underline;
+    color: grey
+}
+
+.navbar-brand {
+    font-size: 35px;
+}
+
+.nav-item {
+    font-size: 25px;
+}
