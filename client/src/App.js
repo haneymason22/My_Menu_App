@@ -1,21 +1,20 @@
-// import {Route, BrowserRouter as Router} from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import React, { useEffect, useState } from "react";
 import Recipe from "./pages/Recipe";
 import Login from "./pages/Login";
 import Saved from "./pages/Saved";
+
 import Nav from "./components/Nav";
-import Footer from "./components/Footer";
+import Wrapper from "./components/Wrapper";
 import Header from "./components/Header";
-// import "././App.js";
+import Footer from "./components/Footer";
+
+import "./App.css";
 
 const App = () => {
   const APP_ID = "76ee5205";
   const APP_KEY = "52a0fcb8039096d6fc09d45afd8c1119";
-  // const APP_ID = "";
-  // const APP_KEY = "";
-
-  // "https://api.edamam.com/search?q=chicken&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&from=0&to=3&calories=591-722&health=alcohol-free"
 
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
@@ -23,7 +22,6 @@ const App = () => {
 
   useEffect(() => {
     getRecipes();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query]);
 
   const getRecipes = async () => {
@@ -50,15 +48,18 @@ const App = () => {
     
 
     <div className="App">
+      <Router>
+        <Nav/>
+        <Header/>
+        <Wrapper>
+          <Route exact path="/" component={Login}/>
+          <Route exact path="/login" component={Login}/>
+          <Route exact path="/recipe" component={Recipe}/>
+          <Route exact path="/saved" components={Saved}/>
+        </Wrapper>
+      </Router>
 
-<Nav/>
-  <Header/>
-  <Wrapper>
-    <Route exact path="/" components={Login}/>
-    <Route exact path="/login" components={Login}/>
-    <Route exact path="/recipe" components={Recipe}/>
-    <Route exact path="/saved" components={Saved}/>
-  </Wrapper>
+      
 
       <form onSubmit={getSearch} className="search-form">
         <input className="search-bar" type="text" value={search} onChange={updateSearch} />
