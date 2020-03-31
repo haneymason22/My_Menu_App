@@ -3,9 +3,11 @@ const Schema = mongoose.Schema;
 
 const grocerySchema = new Schema({
    title: { type: String, required: true },
+   diet: { type: String, required: true },
+   ingredients: { type: Array, required: true },
    calories: { type: Number, required: true },
-   ingredients: { type: [String], required: true },
-   directions: { type: [String], required: true },
+   link: { type: String, required: true },
+   image: { type: String },
    date: { type: Date, default: Date.now }
 });
 

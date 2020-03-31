@@ -1,8 +1,12 @@
 // import {Route, BrowserRouter as Router} from "react-router-dom";
 
 import React, { useEffect, useState } from "react";
-import Recipe from "././Recipe";
-import style from "././app.module.css";
+import Recipe from "./pages/Recipe";
+import Login from "./pages/Login";
+import Saved from "./pages/Saved";
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 // import "././App.js";
 
 const App = () => {
@@ -42,7 +46,20 @@ const App = () => {
   };
 
   return (
+
+    
+
     <div className="App">
+
+<Nav/>
+  <Header/>
+  <Wrapper>
+    <Route exact path="/" components={Login}/>
+    <Route exact path="/login" components={Login}/>
+    <Route exact path="/recipe" components={Recipe}/>
+    <Route exact path="/saved" components={Saved}/>
+  </Wrapper>
+
       <form onSubmit={getSearch} className="search-form">
         <input className="search-bar" type="text" value={search} onChange={updateSearch} />
         <button className="search-button" type="submit">
@@ -60,6 +77,7 @@ const App = () => {
           ingredients={recipe.recipe.ingredients}
         />
       ))}
+      <Footer/>
       </div>
     </div>
   );
