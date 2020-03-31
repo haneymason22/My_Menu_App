@@ -2,7 +2,7 @@ import axios from "axios";
 
 export default {
   getRecipes: function (query) {
-    return axios.get(`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`);
+     return axios.get(`https://api.edamam.com/search?q=${query}`);
   },
   
   deleteRecipe: function (id) {
