@@ -1,8 +1,9 @@
 import React from "react";
 import style from "../recipe.module.css";
+import API from "../utils/API";
 
 
-const Recipe = ({title,calories,image, ingredients}) => {
+const Recipe = ({title,calories,image,ingredients}) => {
     return (
 
 
