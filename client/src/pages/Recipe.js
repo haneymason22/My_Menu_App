@@ -5,8 +5,6 @@ import API from "../utils/API";
 
 const Recipe = ({title,calories,image,ingredients}) => {
     return (
-
-
         <div className={style.recipe}>
             <h3>{title}</h3>
             <ol>
