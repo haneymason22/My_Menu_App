@@ -22,7 +22,7 @@ class App extends Component {
             <Route exact path="/" component={Login} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/recipe" component={Recipe} />
-            <Route exact path="/noMatch" component={Saved} />
+            <Route exact path="/saved" component={Saved} />
           </Wrapper>
         </div>
       </Router>
