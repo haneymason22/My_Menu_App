@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import API from "../utils/API";
 // import Results from "../components/Results";
 
-class Saved extends Component {
+class saved extends Component {
     state = {
         savedRecipes: [],
     }
@@ -23,4 +23,4 @@ class Saved extends Component {
     }
 }
 
-export default Saved;
+export default saved;

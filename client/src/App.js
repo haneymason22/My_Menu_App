@@ -6,7 +6,7 @@ import Wrapper from "./components/Wrapper";
 
 import Login from "./pages/Login";
 import Recipe from "./pages/Recipe";
-import Saved from "./pages/Saved";
+import saved from "./pages/saved";
 
 import "./App.css";
 
@@ -22,7 +22,7 @@ class App extends Component {
             <Route exact path="/" component={Recipe} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/recipe" component={Recipe} />
-            <Route exact path="/saved" component={Saved} />
+            <Route exact path="/saved" component={saved} />
           </Wrapper>
         </div>
       </Router>
