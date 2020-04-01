@@ -3,7 +3,9 @@
 }
 
 .header {
-    color: orange
+    color: orange;
+    text-align: center;
+    margin-top: 0px;
 }
 
 .img {
