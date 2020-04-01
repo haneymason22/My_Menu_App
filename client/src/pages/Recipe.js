@@ -53,7 +53,7 @@ const Recipe = () => {
               calories={recipe.recipe.calories}
               image={recipe.recipe.image}
               ingredients={recipe.recipe.ingredients}
-              recipe={recipe.recipe}
+              link={recipe.recipe.url}
             />
           ))}
           
