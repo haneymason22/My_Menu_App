@@ -19,7 +19,7 @@ class App extends Component {
           <Nav />
           <Header />
           <Wrapper>
-            <Route exact path="/" component={Login} />
+            <Route exact path="/" component={Recipe} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/recipe" component={Recipe} />
             <Route exact path="/saved" component={Saved} />
