@@ -17,11 +17,11 @@ class Recipe extends React.Component {
     makeRecipe = recipeData => {
         return {
             _id: recipeData.id,
-            title: recipe.recipe.label,
-            diet: recipe.recipe.dietLabels,
-            calories: recipe.recipe.calories,
-            image: recipe.recipe.image,
-            link: recipe.recipe.ingredients
+            title: recipeData.label,
+            diet: recipeData.dietLabels,
+            calories: recipeData.calories,
+            image: recipeData.image,
+            link: recipeData.ingredients
         }
     }
 
