@@ -1,46 +1,42 @@
 const express = require('express');
 const router = express.Router();
-const bcrypt = require('bcryptjs');
-const config = require('config');
-const jwt = require('jsonwebtoken');
+const bcrypt = require('bcrypt');
 
 
 const User = require('../../models/User');
 
-router.post('/', (req, res) => {
-    const { name, email, password } = req.body;
 
-    if(!name || !email || !password) {
-        return res.status(400).json({msg: "Please enter all fields"});
+app.get("/users", (req, res) => {
+    res.json(User.find());
+  });
+  
+app.post("/users", async (req, res) => {
+    try {
+      const hashedPassword = await bcrypt.hash(req.body.password, 10)
+      const user = {
+      email: req.body.email,
+      password: hashedPassword,
+    };
+    User.create(user)
+    res.status(201).send()
+  } catch {
+    res.status(500).send();
+  }
+  });
+  
+  app.post("/users/login", async (req, res) => {
+    const user = User.find({email:req.body.email})
+    if (user == null) {
+      return res.status(400).send('Cannot find user')
     }
+    try {
+      if(await bcrypt.compare(req.body.password, user.password)) {
+        res.send('Success')
+      } else {res.send('not allowed')}
+    } catch {
+      res.status(500).send()
+    }
+  })
 
-    User.findOne({email})
-    .then(user => {
-        if(user) return res.status(400).json({ msg: "User already exists"});
-
-        const newUser = new User ({
-            name,
-            email,
-            password
-        });
-
-        bcrypt.genSalt(10, (err, salt) => {
-            bcrypt.hash(newUser.password, salt, (err, hash) => {
-                if(err) throw err;
-                newUser.password = hash;
-                newUser.save()
-                    .then(user => {
-                        res.json({
-                            user: {
-                                id: user.id,
-                                name: user.name,
-                                email: user.email
-                            }
-                        });
-                    }); 
-            })
-        })
-    })
-});
 
 module.exports = router;
