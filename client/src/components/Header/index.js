@@ -1,11 +1,12 @@
 import React from "react";
 import "./style.css";
+import "./logo.png"
 
 function Header() {
     return (
         <div className="jumbotron text-center">
             <div className="container text-light">
-                <h1>My Menu App</h1>
+                
             </div>
         </div>
     );
