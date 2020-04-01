@@ -49,6 +49,7 @@ const Recipe = () => {
             <Text
               key={recipe.recipe.label}
               title={recipe.recipe.label}
+              dietLabels={recipe.recipe.dietLabels}
               calories={recipe.recipe.calories}
               image={recipe.recipe.image}
               ingredients={recipe.recipe.ingredients}
