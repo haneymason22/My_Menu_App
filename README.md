@@ -11,11 +11,16 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Screenshots
 
-![2020-04-01](https://user-images.githubusercontent.com/55059602/78181087-6b3f1980-7429-11ea-99ea-16bc4d3bd698.png)
+![2020-04-01 (6)](https://user-images.githubusercontent.com/55059602/78191094-eceb7300-743a-11ea-98fc-04c116a1d0b7.png)
 
-![2020-04-01 (1)](https://user-images.githubusercontent.com/55059602/78181161-84e06100-7429-11ea-8d2f-a253459bc40c.png)
+Searching for recipes corresponding to a specific food item, in this case "salad", displays a number of results for the user.
 
-![2020-04-01 (2)](https://user-images.githubusercontent.com/55059602/78181207-9295e680-7429-11ea-987d-6088a3287776.png)
+![2020-04-01 (5)](https://user-images.githubusercontent.com/55059602/78191008-c3324c00-743a-11ea-9f1f-077c31a26cf7.png)
+
+Clicking on the "View" button takes the user to source of the recipe.
+
+![2020-04-01 (7)](https://user-images.githubusercontent.com/55059602/78191258-405dc100-743b-11ea-8eed-a8238fa72f90.png)
+
 
 
 ## Technologies used

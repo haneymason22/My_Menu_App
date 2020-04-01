@@ -1,4 +1,5 @@
 module.exports = {
-    groceryItem: require("./groceryItem")
+    groceryItem: require("./groceries"),
+    User: require("./user")
   };
   
