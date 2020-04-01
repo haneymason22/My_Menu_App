@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Text from "../components/Text";
+// import Results from "../components/Results";
 
 
 const Recipe = () => {
@@ -34,7 +35,9 @@ const Recipe = () => {
        };
     
        return (
+        
         <div className="App">
+        <h1 className = "header">Search for and Save Recipes of Interest:</h1>
           <form onSubmit={getSearch} className="search-form">
             <input className="search-bar" type="text" value={search} onChange={updateSearch} />
             <button className="search-button" type="submit">
@@ -49,8 +52,10 @@ const Recipe = () => {
               calories={recipe.recipe.calories}
               image={recipe.recipe.image}
               ingredients={recipe.recipe.ingredients}
+              recipe={recipe.recipe}
             />
           ))}
+          
           </div>
         </div>
       );
