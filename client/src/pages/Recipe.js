@@ -21,7 +21,7 @@ class Recipe extends React.Component {
             diet: recipeData.dietLabels,
             calories: recipeData.calories,
             image: recipeData.image,
-            link: recipeData.ingredients
+            ingredients: recipeData.ingredients
         }
     }
 
