@@ -13,6 +13,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 app.use(routes)
+app.get('/');
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://mghaney7:MHane!952@ds263816.mlab.com:63816/heroku_d5wzktxm");
 
