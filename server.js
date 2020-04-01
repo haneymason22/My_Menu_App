@@ -12,8 +12,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-app.use(app.router);
-routes.initialize(app);
+app.use(routes)
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://mghaney7:MHane!952@ds263816.mlab.com:63816/heroku_d5wzktxm");
 
