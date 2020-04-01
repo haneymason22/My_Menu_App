@@ -7,7 +7,7 @@ function Nav() {
 
     <nav className="navbar navbar-expand-lg text-light">
             <div className="container">
-                <Link className="navbar-brand" to="/">My Menu</Link>
+                <Link className="navbar-brand" to="/">My Menu App</Link>
                 <ul className="navbar-nav">
                 <li className="nav-item">
                         <Link

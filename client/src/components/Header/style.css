@@ -1,3 +1,12 @@
 .jumbotron {
     background-image: url(food.jpg);
 }
+
+.header {
+    color: orange
+}
+
+.img {
+    width: 30px;
+    height: 30px;
+}
