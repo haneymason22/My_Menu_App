@@ -15,7 +15,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Searching for recipes corresponding to a specific food item, in this case "salad", displays a number of results for the user.
 
-![2020-04-01 (8)](https://user-images.githubusercontent.com/55059602/78191812-6c2d7680-743c-11ea-8f80-dfd6f8511938.png)
+![2020-04-01 (9)](https://user-images.githubusercontent.com/55059602/78192359-9af81c80-743d-11ea-90c0-d9a6e1734005.png)
 
 Clicking on the "View" button takes the user to source of the recipe.
 
