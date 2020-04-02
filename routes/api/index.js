@@ -1,5 +1,5 @@
  const router = require("express").Router();
- const groceriesRoutes = require("./groceries");
+ const groceriesRoutes = require("./recipes");
 
  router.use("/groceries", groceriesRoutes);
 
