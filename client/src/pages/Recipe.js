@@ -21,6 +21,7 @@ const Recipe = () => {
          );
          const data = await response.json();
          setRecipes(data.hits);
+         setSearch("");
          console.log(data.hits);
        };
     
@@ -31,7 +32,6 @@ const Recipe = () => {
        const getSearch = e => {
          e.preventDefault();
          setQuery(search);
-         setSearch("");
        };
     
        return (
