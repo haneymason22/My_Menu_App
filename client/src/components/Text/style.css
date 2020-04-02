@@ -4,10 +4,11 @@
     margin: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     background: white;
     align-items: center;
-    min-width: 40%;
+    width: 600px;
+    margin-left: 580px
 }
 .image {
     border-radius: 70%;
