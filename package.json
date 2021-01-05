@@ -4,7 +4,7 @@
   "description": "Project #3",
   "main": "server.js",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "enum-values": "^1.2.1",
     "express": "^4.16.3",
     "bcrypt": "^4.0.1",
